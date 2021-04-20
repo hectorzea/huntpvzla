@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Layout } from "../components/layout/layout";
 import ProductDetail from "../components/layout/ProductDetail";
 import useProducts from "../hooks/useProducts";
-const HomeComponent = () => {
-  const { products } = useProducts("created_at");
+
+const Trending = () => {
+  const { products } = useProducts("votes");
   return (
     <div>
       <Layout>
@@ -21,4 +22,4 @@ const HomeComponent = () => {
   );
 };
 
-export default HomeComponent;
+export default Trending;
